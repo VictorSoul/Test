@@ -2,6 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.cs</groupId>
   <artifactId>test</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1-SNAPSHOT</version> 
   <packaging>war</packaging>
+  <distributionManagement>
+        <snapshotRepository>
+            <id>admin</id>
+            <name>Nexus Snapshot</name>
+            <url>http://10.39.202.115:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>    
+    </distributionManagement>
 </project>
