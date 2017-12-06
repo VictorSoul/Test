@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               sh  'mvn clean package'
+               echo "${GIT_BRANCH}"
             }
         }
         stage('Test') {
             steps {
-               sh 'docker cp target/test-0.0.1-SNAPSHOT.war test2:/opt/apache-tomcat-9.0.1/webapps/tese.war'
+              echo 'Deploying....1'
             }
         }
         stage('Deploy') {
