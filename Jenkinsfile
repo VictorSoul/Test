@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-               sh 'docker cp targrt/test-0.0.1-SNAPSHOT.war test1:/opt/apache-tomcat-9.0.1/webapps/tese.war'
+               sh 'docker cp target/test-0.0.1-SNAPSHOT.war test1:/opt/apache-tomcat-9.0.1/webapps/tese.war'
             }
         }
         stage('Deploy') {
