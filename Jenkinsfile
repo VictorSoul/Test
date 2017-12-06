@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+               sh  'mvn clean package'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+               sh 'docker copy targrt/test-0.0.1-SNAPSHOT.war test2:/opt/apache-tomcat-9.0.1/webapps/tese.war'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying....1'
             }
         }
     }
